@@ -1,0 +1,43 @@
+jika ingin menambahkan plugin gunakan format seperti ini 
+
+const axios = require('axios');
+const fs = require('fs'); //import seperti biasa
+
+module.exports = {
+    name: "template", //nama fitur 
+    category: "main", // kategori,sesuaikan dengan folder nya
+    description: "Ini adalah deskripsi untuk perintah template.", // deskripsi
+    
+    register: true, // fitur hanya untuk yang sudah register
+    premium: false, // fitur harus premium user
+    owner: false, // hanya owner
+    pass: null, // fitur memerlukan password contoh = pass: admin123,
+    auth: false, // fitur memerlukan persetujuan owner
+    hidden: false, // menyembunikan fitur dari menu
+
+    run: async (sock, m, args, { userFromDb, isOwner, isPremium }) => {
+        try {
+            const query = args.join(' ');
+            const namaTerdaftar = userFromDb ? userFromDb.name : "Pengguna Tidak Dikenal";
+
+            let replyText = `Halo, *${namaTerdaftar}*!\n\n`;
+            replyText += `Anda mengirimkan perintah '.${module.exports.name}'.\n`;
+            replyText += `Argumen yang Anda berikan: ${query || 'Tidak ada'}\n\n`;
+            replyText += `Status Anda:\n`;
+            replyText += `- Owner: ${isOwner ? 'Ya' : 'Bukan'}\n`;
+            replyText += `- Premium: ${isPremium ? 'Ya' : 'Bukan'}\n`;
+            
+            await m.reply(replyText);
+
+        } catch (error) {
+            console.error(`Error pada perintah '${module.exports.name}':`, error);
+            await m.reply(`Terjadi kesalahan saat menjalankan perintah: ${error.message}`);
+        }
+    }
+};
+
+itu adalah contoh plugin nya,
+ADA ERROR ATAU APAPUN ITU?
+FIX SENDIRI YEK AKAOWKAKKW
+
+list api baca di READMEE.txt
