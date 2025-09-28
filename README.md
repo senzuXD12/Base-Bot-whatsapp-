@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://i.ibb.co/684bLd3/side-view-of-a-black-lynx-with-a-yellow-background-960351-43.jpg" alt="Foss Line Logo" width="200"/>
+  <img src="https://files.catbox.moe/h7i904.jpg" alt="Foss Line Logo" width="200"/>
   <h1>Base Bot WhatsApp</h1>
   <p>Base WhatsApp Bot modular menggunakan Node.js dan Baileys. Cocok sebagai fondasi untuk membuat bot sesuai kebutuhan Anda.</p>
   
