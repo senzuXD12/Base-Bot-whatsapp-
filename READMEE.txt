@@ -11,7 +11,7 @@ beberapa fitur ada yang err dan sudah di tandai/diberi komentar di plugin plugin
 
 karna saya masih belajar belajar jadi di bot ini saya menggunakan ai
 
-direkomendasikan menggunakan nodejs 20+
+direkomendasikan menggunakan nodejs 18+
 untuk run kayak biasa aja
 npm install
 npm start atau node index.js
